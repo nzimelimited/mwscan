@@ -1,0 +1,7 @@
+{
+  "name": "gwillem/magento-malware-scanner",
+  "description": "A collection of Magento malware detection rules",
+  "type": "library",
+  "homepage": "https://www.magereport.com/",
+  "license": "GPL-3.0"
+}

@@ -1,0 +1,34 @@
+/*
+
+This is the place to put handcrafted Yara rules.
+
+HOWEVER
+
+Please don't! Complex Yara rules cannot be converted
+into grep patterns, and as such, the majority of people
+(who use the grep signatures) will not be able to use
+your pattern. 
+
+So only add rules here that cannot be expressed as a 
+single literal or regex.
+
+*/
+
+rule php_code_in_jpeg {
+    strings: 
+        $jpg = { FF D8 FF E0 ?? ?? 4A 46 49 46 00 01 }
+		/*
+        // https://en.wikipedia.org/wiki/List_of_file_signatures
+        // magic module is not standard compiled in on our platform
+        // otherwise: condition: magic.mime_type() == /^image/
+        // $jpg = { 4A 46 49 46 00 01 }
+        */
+        $php = "<?php"
+    condition: ($jpg at 0) and $php
+}
+rule php_code_in_gif {
+    // From https://gist.github.com/Neo23x0/e3d4e316d7441d9143c7
+    strings:
+      $php = "<?php"
+    condition: $php and ( (uint32be(0) == 0x47494638 and uint16be(4) == 0x3961) or (uint32be(0) == 0x47494638 and uint16be(4) == 0x3761) )
+}

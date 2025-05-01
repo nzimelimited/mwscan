@@ -1,0 +1,18 @@
+Source: mwscan
+Maintainer: Willem de Groot <gwillem@gmail.com>
+Section: python
+Priority: optional
+Build-Depends: python, python-dev, dh-python, python-setuptools, debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/gwillem/magento-malware-scanner
+X-Python-Version: >= 2.6
+
+Package: python-mwscan
+Architecture: all
+# don't use ${python:Depends} here as dh-python will replace that with a more
+# strict version constraint than we want (e.g. >= 2.7.5-5~)
+Depends: ${misc:Depends}, python:any (>= 2.6), python:any (<< 2.8),
+	python-yara, python-psutil, python-requests (>= 0.8.2)
+Description: Find malware in web documents.
+ A Yara wrapper to identify malware, with support for incremental scans, extension filtering and efficient hash whitelisting.
+

@@ -1,0 +1,631 @@
+mwscan (20181220.165251) xenial; urgency=medium
+
+  [ Willem de Groot ]
+  * Updated CentOS instructions
+
+  [ Max Chadwick ]
+  * Use HTTPS in instructions (#206)
+
+  [ thomasbrockmeier ]
+  * add brewtees.com burner domain (#207)
+
+  [ Willem de Groot ]
+  * brewtees.com from burner to hijacked, see #207 (#208)
+
+  [ thomasbrockmeier ]
+  * add compromised domain (#209)
+
+  [ Willem de Groot ]
+  * Add cratfsman hijacker (#210)
+  * Add extra rule for encrypted webshell (#211)
+  * Add reinfection mechanism sample (#212)
+  * Py2.6 doesnt have keyword args for decode() (#205)
+  * Maxided server spam (#215)
+
+  [ Jeroen Vermeulen ]
+  * Whitelisted es5-ext JS file (#214)
+
+  [ thomasbrockmeier ]
+  * This strain was spotted in the wild with an 8 character offset (#216)
+  * adds jquery-js.com (#217)
+
+  [ Willem de Groot ]
+  * Added google-anaiytic.com burner
+  * Add cdn-ch.org skimmer (#218)
+  * Froghopper backdoor dropper in gif asset (#219)
+  * Update README.md
+  * Removed fp due to false positives (#220)
+  * Walletgear obfuscated malware (#221)
+  * Malware killing malware (#222)
+  * Added market-stats.com burner (reg 2017) (#223)
+  * Found a load of new malware by cross-referencing (#224)
+  * TCI auto hijacked lightbox (#225)
+  * Remove hex eval: FP (#226)
+  * Remove too generic FP sigs (#227)
+  * Update burner-domains.txt
+  * Erpflex hijack (#228)
+
+  [ GoonCyberSec ]
+  * Update burner-domains.txt (#230)
+
+  [ Willem de Groot ]
+  * Add fake googletagmanager burner (#232)
+  * Add jscontroller.stream burner (~500 hits) (#233)
+  * Add allyouwant.online, see SE question (#234)
+  * Update burner-domains.txt
+  * Add https://magentocore.net/clear.json
+  * Moved FP to suspicious.yar (#235)
+  * Add mage.js from magentocore.net
+  * Remove FP from custom
+  * Moved cloudservice.tw from frontend to burners
+  * Add g-analytics analytics.js
+  * Added magento.name (replacement for magentocore.net)
+
+  [ Besselink ]
+  * Update who-is-using.md (#236)
+
+  [ krautface ]
+  * Added exfil domains (#237)
+
+  [ Willem de Groot ]
+  * Update README with early access notice
+  * README.md typo
+  * Update README.md
+  * Update README.md
+  * Added Gossi's find https://twitter.com/GossiTheDog/status/1042807834109456384
+
+  [ pmcmanaman ]
+  * Update burner-domains.txt (#238)
+  * add domains from (#239)
+
+  [ Fabio Ros ]
+  * New malwares, and doc improvements (#240)
+
+  [ Roland Walraven ]
+  * Add whitelist entries for obfuscated licence check. (#241)
+
+  [ Willem de Groot ]
+  * Update README.md
+
+  [ pmcmanaman ]
+  * add more domains (#242)
+
+  [ Willem de Groot ]
+  * Update README.md
+
+  [ evlhomer ]
+  * Added magento-analytics.com (#243)
+
+  [ Dave Chamberlain ]
+  * Added new domain (#244)
+
+  [ Edwin ]
+  * Update burner-domains.txt (#245)
+
+  [ Jonas Hünig ]
+  * Added whitelist for phpwcms (#248)
+
+  [ leeps ]
+  * Whitelist: Add more versions of sqlparser.lib.php (#247)
+
+  [ Jonas Hünig ]
+  * more exact matching for eval_post (#249)
+
+  [ Lucas van Staden ]
+  * Add way to combine with mailx for hosted server cron usage (#250)
+
+  [ Yuxael Egotk ]
+  * Fix handling of files with cached rulesets (#251)
+
+  [ Willem de Groot ]
+  * Update version in setup.py to 20181220.165251
+
+ -- Willem de Groot <gwillem@gmail.com>  Thu, 20 Dec 2018 16:52:58 +0100
+
+mwscan (20180510.172121) xenial; urgency=medium
+
+  [ evlhomer ]
+  * Update burner-domains.txt
+
+  [ Willem de Groot ]
+  * Hacked miibox.com JS malware
+  * Add Froghopper assets
+  * Add Baterky payment sniffer
+  * Add zs.mk cookiestealer
+  * Add ctimer find util
+  * Add redirector scam domains (#197)
+
+  [ Carsten Bohuslav ]
+  * added maxcluster to the list (#200)
+
+  [ Willem de Groot ]
+  * Add backlinks-spam link poster via #199 (#201)
+  * Added burner domain as discovered by Flashpoint (#202)
+  * Fix unicode vs utf8 problem with magesec ruleset (#203)
+  * Update version in setup.py to 20180510.172121
+
+ -- Willem de Groot <gwillem@gmail.com>  Thu, 10 May 2018 17:21:23 +0200
+
+mwscan (20180307.122431) xenial; urgency=medium
+
+  [ Willem de Groot ]
+  * Fixes #165
+  * More burners - magemojo import
+  * Fixes #160
+  * Speed up Travis checks against fresh installs
+
+  [ Rick van de Loo ]
+  * Update control
+
+  [ Andreas Lutro ]
+  * make debian packaging work out of the box
+
+  [ Rick van de Loo ]
+  * change source package format to native
+
+  [ Willem de Groot ]
+  * Update screenshot with proper URL
+  * Rule update instructions
+  * Update README.md
+  * Make all-confirmed.txt catch everything to warn sysadmins about new url
+  * Make all-confirmed.yar catch everything to warn sysadmins about new package
+  * Fix compatibility issue with py26 (CentOS)
+  * Update version in setup.py to 20180307.122431
+
+ -- Willem de Groot <gwillem@gmail.com>  Wed, 07 Mar 2018 12:24:33 +0100
+
+mwscan (20180228.120927) xenial; urgency=medium
+
+  [ Willem de Groot ]
+  * Added dnsden.biz
+
+  [ scone ]
+  * Adding additional domains
+
+  [ Willem de Groot ]
+  * Update build
+  * Burners with custom payment popups
+  * Add ccheckout.com (Travis hung)
+
+  [ Fabio Ros ]
+  * Add 19 new burner domains, alphabetically sorted
+
+  [ Willem de Groot ]
+  * Add better gate.php regex
+
+  [ Tim Muller ]
+  * Overwrite core files using raw files from pastebin
+
+  [ Nick Shenfield ]
+  * Adding rules for new RCE backdoor file
+  * Adding corpus file for new RCE backdoor
+
+  [ Tim Muller ]
+  * base64 encoded cookie-content mailing
+
+  [ Mooey28 ]
+  * Altered eval(atob( rule
+
+  [ Nick Shenfield ]
+  * Added new Sevenpay CC Capture Code
+
+  [ Max Chadwick ]
+  * Document external scanning
+
+  [ Tim Muller ]
+  * Base64 serialized postdata
+  * This should not happen too
+
+  [ Nick Shenfield ]
+  * Added new obfuscations and burner domain
+  * Added another burner domain
+
+  [ Tim Muller ]
+  * Add three more burner-domains
+  * Trying to pass the tests
+
+  [ Willem de Groot ]
+  * Fix Travis forced update to trusty
+  * Universe should work
+  * Force precise while we don't have trusty pkgs yet
+
+  [ Tim Muller ]
+  * Detect new generic payment url method
+  * Add burner domain used
+
+  [ jissereitsma ]
+  * Doc for error "ImportError: No module named argparse"
+
+  [ Tim Muller ]
+  * False positive for base64_serialized_post_request
+
+  [ Nick Shenfield ]
+  * Added a new burner domain
+
+  [ Mooey28 ]
+  * New Burner Domain - Hosted JS Script
+
+  [ Tim Muller ]
+  * Add burner domain
+
+  [ Mooey28 ]
+  * Update all-confirmed.txt
+
+  [ Willem de Groot ]
+  * Add fingerprints for #147
+
+  [ Tim Muller ]
+  * Remove False-positive.
+
+  [ Willem de Groot ]
+  * Only set I/O prio on Linux, fixes #146
+
+  [ Luke Rodgers ]
+  * Revert "Update all-confirmed.txt"
+
+  [ Willem de Groot ]
+  * Several new backdoors and burners
+  * Add nodejsapi.net burner
+  * Add generic gate.php rule
+  * Added burner ciscostats.com (around ~50 sites infected)
+  * CoinHive cryptojacking signatures
+  * Update frontend signatures
+
+  [ Tim Muller ]
+  * js/lib corpus
+
+  [ Thomas Brockmeier ]
+  * add rules
+  * additional burner domains
+  * validate signatures
+
+  [ Tim Muller ]
+  * Base64 encoded Symlink_Sa 2.0
+  * Regex indicator instead of literal string
+  * Evil Eval for obfuscating filesman
+  * Mage.php billing leak
+  * Obfuscated webshell
+  * Script for sending spam
+  * Compromised Get.php to store malicious files
+
+  [ Thomas Brockmeier ]
+  * additional burner domains
+
+  [ Jeroen Vermeulen ]
+  * Create deobfuscate_dynamic_base64_function_call_us_04557.md
+  * Update deobfuscate_dynamic_base64_function_call_us_04557.md
+  * Update deobfuscate_dynamic_base64_function_call_us_04557.md
+
+  [ Root on server mist ]
+  * Added quite some whitelisting required for rule `dynamic_base64_function_call_us_04557`
+
+  [ Thomas Brockmeier ]
+  * additional burner domains
+  * resolve conflicts
+
+  [ Tim Muller ]
+  * Add burner domain magentocore
+  * Add frontend corpus
+
+  [ Willem de Groot ]
+  * Add rogue CloudConnectERP backdoor check
+  * Add URL encoded coinhive miner
+  * Update usage.md
+  * Don't follow recursive symlinks
+  * Fix iterator vs list bug for py2/3
+  * Test upload of rules by Travis
+  * WIP Externalize build artefacts
+  * Remove build dir from setup.py
+  * Remove git.io url and all-confirmed references
+  * Add several burners
+  * Update README.md
+  * Update .travis.yml
+
+  [ Hardy Johnson ]
+  * Magesec URL fix
+
+  [ Willem de Groot ]
+  * Update package build script
+  * Update version in setup.py to 20180228.120743
+  * Update changelog for 20180228.120743 release
+  * Update version in setup.py to 20180228.120853
+  * Update version in setup.py to 20180228.120927
+
+ -- Willem de Groot <gwillem@gmail.com>  Wed, 28 Feb 2018 12:09:36 +0100
+
+mwscan (20170601.141726) xenial; urgency=medium
+
+  * Update version in setup.py to 20170601.141726
+
+ -- Willem de Groot <gwillem@gmail.com>  Thu, 01 Jun 2017 14:17:26 +0200
+
+mwscan (20170516.130211) xenial; urgency=medium
+
+  [ Mooey28 ]
+  * Encoded JavaScript CC Hijack
+  * Encoded JS CC Hijack Rule
+
+  [ Willem de Groot ]
+  * Rebuild rules
+  * Add sample from MDL
+  * Add perl patched signature
+  * Add 7 signatures
+  * Fix cron instructions
+  * Remove uname FP
+  * New JS malware
+  * Fix all to any for appliccable sigs
+  * Autogenerated Yara rules
+  * Cleaned up a couple of signatures without proof
+  * Moved burder domains to own file
+  * Refactored build rules and test
+  * Added shitload of burner domains
+  * Add 3 more regexes
+  * Update Contributing with new txt rules
+  * Add Magento2.js malware
+  * Restores suspicious rules and add explanation
+  * Add some more burners
+  * Better naming for yara rules
+  * Yara rules based on burner domains
+  * More JQuery burners
+  * Add eval atob JS
+  * Frontend Regex from MageReport
+  * Add Wordpress backdoor
+  * Add magemarts.com burner
+
+  [ Jeroen Vermeulen ]
+  * Added Yara install to CONTRIBUTING doc
+
+  [ Root on server ice ]
+  * Created signatures from hack files found in /media/dhl Added *~ to .gitignore for users of the editor Joe.
+  * Added modification found in Onepage.php
+
+  [ Willem de Groot ]
+  * Remove newer_than file collection
+  * Tuned eval request sig
+
+  [ Root on server rock ]
+  * Added whitelist entry for the licence check in the Wexto/Exporter extension. Decoded: ```php public function bdAction() {     $v = Mage::helper("exporter")->getVersion();     echo( implode($v["local_version"],"!") . "!" . sha1( ( sha1($this->getRequest()->getParam('k')) == '157ac5924012666429dc683ce8fba8d11224bc60')                                                            ? Mage::getStoreConfig("wexto-license")                                                            : ""                                                        )     ); } ```
+  * Added SM/XPos licence to whitelist + script to deobfuscate this file.
+  * Improved deobfuscate_php_nested_eval.sh because of security risks.
+  * Added malware found in Magmi dir
+  * Removed execute flag from files in `corpus` dir
+
+  [ Willem de Groot ]
+  * Fix cmdline instructions to choose Py3 over Py2
+  * Py3 build
+
+  [ Root on server rock ]
+  * Added 2 PHP Shells + phpMiniAdmin
+  * Improved rules because we caught lots of false positives because of licence checks.
+  * Added VladimirPopov to WL + improved deobfuscate_php
+  * Whitelisted GoMage Helpers, blacklisted MDT
+  * Removed decoded files from whitelist
+  * Added more GoMage stuff to whitelist
+
+  [ Willem de Groot ]
+  * Revert generic eval base64_decode
+  * magmi.ini files are also used to embed PHP code
+  * Update version in setup.py to 20170516.130211
+
+ -- Willem de Groot <gwillem@gmail.com>  Tue, 16 May 2017 13:02:17 +0200
+
+mwscan (20170322.194652) xenial; urgency=medium
+
+  * Add analiticoscdn.com malware (already recognized)
+  * Fix attributeerror on Ubuntu 12 when supressing SSL warnings
+  * JS hex checkout detection
+
+ -- Willem de Groot <gwillem@gmail.com>  Wed, 22 Mar 2017 19:46:53 +0100
+
+mwscan (20170317.114028) xenial; urgency=medium
+
+  [ Willem de Groot ]
+  * Tuned two greedy signatures (fps)
+  * Moved FP generator to suspicious.yar
+  * Add devinc whitelist entries
+  * Add mage-storage signatures
+
+  [ Nat ]
+  * Add undecrypted backdoor script added to magento instance via web shell
+
+  [ Willem de Groot ]
+  * Suppress SSL warnings for old Python installs
+
+ -- Willem de Groot <gwillem@gmail.com>  Fri, 17 Mar 2017 11:40:30 +0100
+
+mwscan (20170208.125606) xenial; urgency=medium
+
+  [ David Alger ]
+  * Add malware payload and attack vector used to install infected file on servers
+  * Update signature so patched version of Cart2Quote (i.e. eliminated RCE) file won’t trip the scanner
+
+  [ AKelly28 ]
+  * Obfuscated RCE script
+  * Signature for Globals obfuscation
+  * Two new signatures
+  * Card capture code
+
+  [ Willem de Groot ]
+  * Remove cart2quote signature as it is not malware
+  * Force .deb signing in build script
+  * Add unserialize exploitation artefacts
+  * Added AKellys rules
+  * Add 48 new sigs
+  * Add path exclusion filter option
+  * Update version in setup.py to 20170208.125606
+
+ -- Willem de Groot <willem@byte.nl>  Wed, 08 Feb 2017 12:56:08 +0100
+
+mwscan (20170131.175006) xenial; urgency=medium
+
+  [ frosit ]
+  * 6 samples, doc changes and ignore addition, please review
+  * removed adminer as it's not really malware
+  * stripping out meta
+  * fixing broken rule
+  * update fo rule 22927e670b0953c01874d626110aa474
+
+  [ Willem de Groot ]
+  * Normalized rules
+  * Make checkout detection more generic
+  * Changed malware path to corpus in docs
+
+ -- Willem de Groot <gwillem@gmail.com>  Tue, 31 Jan 2017 17:50:28 +0100
+
+mwscan (20170130.144142) xenial; urgency=medium
+
+  * Fix callback bug
+
+ -- Willem de Groot <willem@byte.nl>  Mon, 30 Jan 2017 14:41:42 +0100
+
+mwscan (20170130.133048) xenial; urgency=medium
+
+  * Fix suppression of all output with --quiet  (#55)
+
+ -- Willem de Groot <willem@byte.nl>  Mon, 30 Jan 2017 13:30:49 +0100
+
+mwscan (20170127.110829) xenial; urgency=medium
+
+  * Change --newonly to scan everything but report only new infections (+caching of rulesets) (#44)
+  * Change malware to corpus and add whitelist (#50)
+
+ -- Willem de Groot <willem@byte.nl>  Fri, 27 Jan 2017 11:08:30 +0100
+
+mwscan (20170126.154039) xenial; urgency=medium
+
+  * Fix requests 0.8.4 compatibility
+
+ -- Willem de Groot <willem@byte.nl>  Thu, 26 Jan 2017 15:40:40 +0100
+
+mwscan (20170126.153225) xenial; urgency=medium
+
+  * Fix semver syntax err in setup.py
+  * Update version in setup.py to 20170126.153225
+
+ -- Willem de Groot <willem@byte.nl>  Thu, 26 Jan 2017 15:32:25 +0100
+
+mwscan (20170126.152901) xenial; urgency=medium
+
+  [ David Alger ]
+  * Fixes invalid psutil usage on darwin
+
+  [ Willem de Groot ]
+  * Add ruleset caching
+  * Change --newonly to scan everything but only report new files
+
+ -- Willem de Groot <willem@byte.nl>  Thu, 26 Jan 2017 15:29:04 +0100
+
+mwscan (20170124.202053) xenial; urgency=medium
+
+  * Add conditional import to allow Py2/3
+  * Update build rules
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 24 Jan 2017 20:20:54 +0100
+
+mwscan (20170118.214807) xenial; urgency=medium
+
+  * Add Anua Ransomware signature (#38)
+  * Added fake ebizmart payment harvester (#40)
+  * Recursive sha1sum generator for mass whitelisting (#41)
+
+ -- Willem de Groot <willem@byte.nl>  Wed, 18 Jan 2017 21:48:07 +0100
+
+mwscan (20170118.101046) xenial; urgency=medium
+
+  * Compatibility with old requests module
+
+ -- Willem de Groot <willem@byte.nl>  Wed, 18 Jan 2017 10:10:47 +0100
+
+mwscan (20170117.194808) xenial; urgency=medium
+
+  * Don't follow symlinks (#35)
+  * Debian build script more verbose
+  * Enable downloading of external rulesets (NBS, Magemojo, Byte) (#37)
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 17 Jan 2017 19:48:09 +0100
+
+mwscan (20170112.202348) xenial; urgency=medium
+
+  * Update version in setup.py to 20170112.202348
+
+ -- Willem de Groot <willem@byte.nl>  Thu, 12 Jan 2017 20:23:49 +0100
+
+mwscan (20170112.182258) xenial; urgency=medium
+
+  * Add CentOS instructions
+  * Add PMA to whitelist (#31)
+  * Flag all FOPO obfuscation (#30)
+
+ -- Willem de Groot <willem@byte.nl>  Thu, 12 Jan 2017 18:23:00 +0100
+
+mwscan (20170111.181531) xenial; urgency=medium
+
+  * Setup.py py26 compat
+  * Update version in setup.py to 20170111.181531
+
+ -- Willem de Groot <willem@byte.nl>  Wed, 11 Jan 2017 18:15:32 +0100
+
+mwscan (20170111.181045) xenial; urgency=medium
+
+  * Have setuptools honor symlinks
+  * Update setup.py to comply with pypi
+  * Update version in setup.py to 20170111.181045
+
+ -- Willem de Groot <willem@byte.nl>  Wed, 11 Jan 2017 18:12:13 +0100
+
+mwscan (20170111.125701) xenial; urgency=medium
+
+  * Merged howto and usage docs
+  * Add Debian packaging (#26)
+  * Add whitelist entries as seen on our platform (#28)
+  * Ensure Python 2.6 / Centos 6 compatibility (#27)
+  * Remove redundant debian build file
+  * Update version in setup.py to 20170111.125701
+
+ -- Willem de Groot <willem@byte.nl>  Wed, 11 Jan 2017 12:57:02 +0100
+
+mwscan (20170110.141806) xenial; urgency=medium
+
+  * Check both ctime and mtime
+  * Don't show stacktrace when control c
+  * Update version in setup.py to 20170110.141806
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 10 Jan 2017 14:18:07 +0100
+
+mwscan (20170110.124211) xenial; urgency=medium
+
+  * Change mod on builddep.sh
+  * Update version in setup.py to 20170110.124211
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 10 Jan 2017 12:42:12 +0100
+
+mwscan (20170110.124119) xenial; urgency=medium
+
+  * Added doc to control
+  * Updated builddeb.sh script
+  * Put state file in homedir, not tmp
+  * Update version in setup.py to 20170110.124119
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 10 Jan 2017 12:41:20 +0100
+
+mwscan (20170110.121746) xenial; urgency=medium
+
+  * UNRELEASED
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 10 Jan 2017 12:19:36 +0100
+
+mwscan (20170110.114520) xenial; urgency=medium
+
+  * Debianize for py2 only
+  * A working build layout for py2
+  * Updated gitignore
+  * Don't store egg meta data in repo
+  * Update version in setup.py to 20170110.114520
+
+ -- Willem de Groot <willem@byte.nl>  Tue, 10 Jan 2017 11:50:42 +0100
+
+mwscan (1.0.1-1) unstable; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Willem de Groot <gwillem@gmail.com>  Tue, 10 Jan 2017 10:50:20 +0100

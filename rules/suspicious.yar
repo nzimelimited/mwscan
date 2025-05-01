@@ -1,0 +1,87 @@
+
+global private rule malware_size {
+    meta:
+        description = "Limit on file size"
+    condition:
+        /* uint16(0) == 0x4B50 and filesize < 3MB */
+        filesize < 500KB
+}
+
+rule obfuscated_eval {
+    strings: $ = /\\x65\s*\\x76\s*\\x61\s*\\x6C/
+    condition: any of them
+}
+
+rule fromCharCode_in_unicode {
+    strings: $ = "\\u0066\\u0072\\u006f\\u006d\\u0043\\u0068\\u0061\\u0072\\u0043\\u006f\\u0064\\u0065"
+    condition: any of them
+}
+rule function_through_object {
+    strings: 
+        $ = "['eval']"
+        $ = "['unescape']"
+        $ = "['charCodeAt']"
+        $ = "['fromCharCode']"
+        $ = /\\x..\\x..\\x..\\x..':function\(\w\d,\w\d,/
+    condition: any of them
+}
+rule hex_script {
+    strings:
+        $ = "\\x73\\x63\\x72\\x69\\x70\\x74\\x22"
+    condition: any of them
+}
+rule php_malfunctions {
+    strings:
+        $ = "eval("
+        $ = "gzinflate("
+        $ = "str_rot13("
+        $ = "base64_decode("
+        $ = "gzuncompress("
+    condition: 3 of them
+}
+rule php_obf_malfunctions {
+    strings:
+        $ = /\b(eval|str_rot13|gzinflate|base64_decode|gzuncompress)\(\s*(str_rot13|gzinflate|base64_decode|gzuncompress)\(/
+    condition: any of them
+}
+rule fopo_obfuscator {
+    strings:
+        $ = "www.fopo.com.ar"
+    condition: any of them
+}
+rule obf_base64_decode {
+    strings: $ = "\\x62\\x61\\x73\\145\\x36\\x34\\x5f\\x64\\x65\\143\\x6f\\144\\145"
+    condition: any of them
+}
+rule html_upload {
+    strings: 
+        $ = "<input type='submit' name='upload' value='upload'>"
+        $ = "if($_POST['upload'])"
+    condition: any of them
+}
+rule php_uname {
+    strings: $ = "php_uname()"
+    condition: any of them
+}
+rule scriptkiddies {
+    strings:
+        $ = "lastc0de@Outlook.com" nocase
+        $ = "CodersLeet" nocase
+        $ = "AgencyCaFc" nocase
+        $ = "IndoXploit" nocase
+        $ = "Kapaljetz666" nocase
+    condition: any of them
+}
+rule evil_eval {
+	strings:
+		$ = /(^|\s)eval\s*\/\*.{,128}\*\/\s*\(/
+        $ = "eval(atob("
+	condition: any of them
+}
+rule JS_Encoded_CC_Hijack {
+    strings: 
+	$a = /function \w\(\w,\s?\w,\s?\w\)/
+	$b = /\w = \(\w\s?\+\s?\w\)\s?\%\s?\w\.length/
+	$c = /\w\.charAt\(\w\)/
+    condition: ($a and $b and $c)
+}
